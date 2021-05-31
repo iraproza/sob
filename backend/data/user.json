@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Masha",
+        "email": "masha@gmail.com",
+        "password": "qwerty1",
+        "avatar": 
+            {
+                "public_id": "qwertyyuio",
+                "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
+            }
+        ,
+        "role": "Admin"
+    },
+    {
+        "name": "Ira",
+        "email": "ira@gmail.com",
+        "password": "qwerty2",
+        "avatar": 
+            {
+                "public_id": "asdfghjkkl",
+                "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
+            }
+        ,
+        "role": "User"
+    },
+    {
+        "name": "Vika",
+        "email": "vika@gmail.com",
+        "password": "qwerty3",
+        "avatar": 
+            {
+                "public_id": "zxcvbnmjj",
+                "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
+            }
+        ,
+        "role": "User"
+    },
+    {
+        "name": "Misha",
+        "email": "misha@gmail.com",
+        "password": "qwerty4",
+        "avatar": 
+            {
+                "public_id": "sdregd5egd7",
+                "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
+            }
+        ,
+        "role": "User"
+    },
+    {
+        "name": "Andrii",
+        "email": "andrii@gmail.com",
+        "password": "qwerty5",
+        "avatar": 
+            {
+                "public_id": "dterdbdgfy5",
+                "url": "https://i2.rozetka.ua/goods/18530646/acer_um_kv2ee_p01_images_18530646283.jpg"
+            }
+        ,
+        "role": "User"
+    }
+] 
