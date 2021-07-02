@@ -38,3 +38,39 @@ export async function getDeleteProduct(Id) {
         .catch(err => console.log(err));
     return allProducts;
 }
+
+export async function putEditProduct(Id, body) {
+    const result = fetch(`http://localhost:4000/api/v1/product-edit/${Id}`, {
+        method: 'PUT',
+        body: JSON.stringify(body),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then((response) => {
+            return response.json()
+        })
+        .then(data => {
+            return data;
+        })
+        .catch(err => console.log(err));
+    return result;
+}
+
+export async function postProduct(body) {
+    const result = fetch(`http://localhost:4000/api/v1/product-add`, {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then((response) => {
+            return response.json()
+        })
+        .then(data => {
+            return data;
+        })
+        .catch(err => console.log(err));
+    return result;
+}

@@ -1,0 +1,13 @@
+.products-container {
+    padding: 30px 0;
+    gap: 10px;
+}
+
+.card {
+   
+    padding: 15px;
+}
+
+p i {
+    margin-left: 10px;
+}

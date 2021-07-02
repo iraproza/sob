@@ -47,17 +47,17 @@ const productScheme = new mongoose.Schema({
     },
     composition: {
         type: String,
-        required: [true, "Enter product seller"]
+        required: [false, "Enter product seller"]
     },
     stock: {
         type: Number,
-        required: [true, "Enter product stock"],
+        required: [false, "Enter product stock"],
         maxLength: [5, "Stock range from 1 to 99999"],
         default: 0
     },
     salePrice:{
         type: Number,
-        required: [true, "Enter Sale price"],
+        required: [false, "Enter Sale price"],
         maxLength: [5, "Sale price range from 1 to 99999"],
         default: 0.0,
     },

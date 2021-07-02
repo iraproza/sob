@@ -6,9 +6,10 @@ import ReactDOM from 'react-dom';
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import Contact from "./Components/Contact/Contact";
-// import Content from "./Components/Content/Content";
+import Products from "./Components/Products/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
-import SinglePage from "./Components/SinglePage/SinglePage";
+import Product from "./Components/Product/Product";
+import AddProduct from "./Components/AddProduct/AddProduct";
 
 //REDUX store
 import store from "./store";
@@ -32,15 +33,16 @@ class App extends Component {
               {/* <Route path="/" exact component={Content} /> */}
               <Route path="/contact" exact component={Contact} />
               <Route path="/about-us" exact component={AboutUs} />
-              <Route path="/single-page" exact component={SinglePage} />
+              <Route path="/" exact component={Products} />
+              <Route path="/product/:id" exact component={Product} />
+              <Route path="/product-add" exact component={AddProduct} />
               {/* <Route component={Page404} />                */}
-              {/* <Route path="/" exact /> */}
             </Switch> 
           <Footer />
         </Router>
       </Provider>
     )  }}
-// ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));
 
 
 export default App;
