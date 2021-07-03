@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import {Button, Carousel } from 'react-bootstrap';
+import { Carousel } from 'react-bootstrap';
 import "./Products.css";
 import ProductItem from "./ProductItem/ProductItem";
 import { getAllProducts } from "../../Services/api-service";

@@ -12,15 +12,8 @@ class ProductItem extends Component {
 
         const {  name,
             price,
-            descriptions,
             images,
-            howUse,
-            category,
-            composition,
             stock,
-            salePrice,
-            reviews,
-            createdAt,
             _id
         } = this.props;
 
@@ -28,12 +21,12 @@ class ProductItem extends Component {
             <Fragment>
                 <a href='#' class='details'>
                     <Card>
-                        <div class='img-box'>
+                        <div className='img-box'>
                             <Card.Img variant="top" src={images[0]?.url || "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png?w=640"} />
                         </div>
                         <Card.Body>
                             <Card.Title>{name}</Card.Title>
-                            <Card.Text > <i class="fas fa-shopping-bag"></i>
+                            <Card.Text > <i className="fas fa-shopping-bag"></i>
                                 {stock}
                             </Card.Text>
                             <Link to={`/product/${_id}`}>

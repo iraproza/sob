@@ -1,7 +1,7 @@
 import React from 'react'
 import "../../index.css"
 import { connect } from "react-redux";
-import {Nav, Navbar, NavDropdown, Container, Form,Button, FormControl} from 'react-bootstrap';
+import {Nav, Navbar, Container, Form,Button, FormControl} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./Header.css";
 import {searchContact} from "../../Actions/shopActions"

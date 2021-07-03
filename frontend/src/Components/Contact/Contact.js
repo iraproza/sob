@@ -1,7 +1,5 @@
 import React from 'react';
-
 import "./Contact.css";
-
 import { Form, Col } from "react-bootstrap";
 
 

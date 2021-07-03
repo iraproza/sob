@@ -70,10 +70,3 @@ exports.get404Page = catchErrors((req, res, next) => {
         message: "Page-404"
     })   
 })
-
-exports.getHomePage = catchErrors((req, res, next) => {
-    res.status(200).json({
-        success: true,
-        message: "getHomePage"
-    })
-})

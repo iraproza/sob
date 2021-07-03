@@ -1,8 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { connect } from "react-redux";
-// import { Link } from "react-router-dom";
 import "./Product.css";
-// import ProductItem from "./ProductItem/ProductItem";
 import { getOneProduct, getDeleteProduct, putEditProduct } from "../../Services/api-service";
 import { getCurrentProduct as getCurrentProductAction, editOneProduct } from "../../Actions/shopActions";
 
@@ -60,13 +58,7 @@ const Product = ({ match, product, getCurrentProduct, history, editOneProduct })
         descriptions,
         images,
         howUse,
-        category,
-        composition,
-        stock,
-        salePrice,
-        reviews,
-        createdAt,
-        _id
+        composition
     } = product;
 
     return (

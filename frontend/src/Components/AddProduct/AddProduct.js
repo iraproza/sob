@@ -1,8 +1,5 @@
 import React, { Fragment, useState } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import {Button } from 'react-bootstrap';
-// import "./Products.css";
 import { postProduct } from "../../Services/api-service";
 import { getAllProd } from "../../Actions/shopActions";
 
@@ -41,37 +38,37 @@ const AddProduct = ({history}) => {
 
     return(
         <Fragment>     
-            <div class="container">
-                <div class="row">
-                    <div class="col">
+            <div className="container">
+                <div className="row">
+                    <div className="col">
                         <form action="/add-product" method="post" onSubmit={onSubmit}>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label for="product">Name</label>
-                                <input type="text" class="form-control" name="title" aria-describedby="addProduct" value={product.name} onChange={(e) => onChange(e.target.value, 'name')}/>
+                                <input type="text" className="form-control" name="title" aria-describedby="addProduct" value={product.name} onChange={(e) => onChange(e.target.value, 'name')}/>
                             </div> 
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label for="category">Category</label>
                                 <select value={product.category} onChange={(e) => onChange(e.target.value, 'category')} defaultValue="">
                                     <option value="Make-up">Make-up</option>
                                     <option value="Hair">Hair</option>
                                 </select>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label for="price">Price</label>
-                                <input type="number" class="form-control" name="price" aria-describedby="addProduct" value={product.price} onChange={(e) => onChange(Number(e.target.value), 'price')}/>
+                                <input type="number" className="form-control" name="price" aria-describedby="addProduct" value={product.price} onChange={(e) => onChange(Number(e.target.value), 'price')}/>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label for="howUse">How use</label>
-                                <input type="text" class="form-control" name="howUse" aria-describedby="addProduct" value={product.howUse} onChange={(e) => onChange(e.target.value, 'howUse')}/>
+                                <input type="text" className="form-control" name="howUse" aria-describedby="addProduct" value={product.howUse} onChange={(e) => onChange(e.target.value, 'howUse')}/>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <label for="image">Image</label>
-                                <input type="text" class="form-control" name="image" aria-describedby="addProduct"/>
+                                <input type="text" className="form-control" name="image" aria-describedby="addProduct"/>
                             </div>
-                            <div class="form-group">
+                            <div className="form-group">
                                 <textarea name="description" id="" cols="30" rows="6" value={product.descriptions} onChange={(e) => onChange(e.target.value, 'descriptions')}></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" disabled={!isValid}>Submit</button>
+                            <button type="submit" className="btn btn-primary" disabled={!isValid}>Submit</button>
                         </form>
                     </div>
                 </div>

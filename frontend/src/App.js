@@ -10,6 +10,8 @@ import Products from "./Components/Products/Products";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Product from "./Components/Product/Product";
 import AddProduct from "./Components/AddProduct/AddProduct";
+import Page404 from "./Components/Page404/Page404";
+
 
 //REDUX store
 import store from "./store";
@@ -30,13 +32,12 @@ class App extends Component {
         <Router>
           <Header />
             <Switch>
-              {/* <Route path="/" exact component={Content} /> */}
               <Route path="/contact" exact component={Contact} />
               <Route path="/about-us" exact component={AboutUs} />
               <Route path="/" exact component={Products} />
               <Route path="/product/:id" exact component={Product} />
               <Route path="/product-add" exact component={AddProduct} />
-              {/* <Route component={Page404} />                */}
+              <Route component={Page404} />               
             </Switch> 
           <Footer />
         </Router>
