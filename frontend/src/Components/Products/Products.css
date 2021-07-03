@@ -11,3 +11,11 @@
 p i {
     margin-left: 10px;
 }
+
+.carousel-item {
+    height: 500px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
