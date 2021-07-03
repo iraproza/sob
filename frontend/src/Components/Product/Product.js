@@ -71,33 +71,35 @@ const Product = ({ match, product, getCurrentProduct, history, editOneProduct })
 
     return (
         <Fragment>
-            <div className="box">	
-                <div className="product-details">
-                    {editing ? <input value={editProduct.name} onChange={(e)=> onEditProduct(e.target.value,'name')}/>:<h1>{name}</h1>}
-                    {editing ? <input value={editProduct.descriptions}  onChange={(e)=> onEditProduct(e.target.value,'descriptions')}/>:<p className="information">{descriptions}</p>}
-                    
-                    <div className="control">
-                        <button className="btn">
-                            {editing ? <input value={editProduct.price}  onChange={(e)=> onEditProduct(Number(e.target.value),'price')}/>:<span className="price">{price}</span>}  
-                            <span className="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
-                            <span className="buy">Buy Now</span>
-                        </button>  
-                        <button onClick={onDelete}> 
-                            Delete 
-                        </button>
-                        <button onClick={onEdit}> 
-                            Edit 
-                        </button>  
-                        <button onClick={onSave}> 
-                            Save 
-                        </button>
+            <div className='container'> 
+                <div className="content">
+                    <div className="product-image">   
+                        <img src={images[0]?.url} alt="Omar Dsoky" />
+                    </div>	
+                    <div className="product-details">
+                        {editing ? <label>Name: <input value={editProduct.name} onChange={(e)=> onEditProduct(e.target.value,'name')}/></label>:<h1>{name}</h1>}
+                        {editing ? <label>Descriptions: <input value={editProduct.descriptions}  onChange={(e)=> onEditProduct(e.target.value,'descriptions')}/></label>:<p className="information">{descriptions}</p>}
+                        {editing ? <label>How Use:<input value={editProduct.howUse}  onChange={(e)=> onEditProduct(e.target.value,'howUse')}/></label>:<p className="information">How Use: {howUse}</p>}
+                        {editing ? <label>Composition:<input value={editProduct.composition}  onChange={(e)=> onEditProduct(e.target.value,'composition')}/></label>:<p className="information">Composition: {composition}</p>}
+                        <div className="control">
+                            <button className="btn">
+                                {editing ? <label>Price: <input value={editProduct.price}  onChange={(e)=> onEditProduct(Number(e.target.value),'price')}/></label>:<span className="price">{price} грн</span>}  
+                                <span className="shopping-cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
+                                <span className="buy">Buy Now</span>
+                            </button>  
+                            <button className="btn btn-danger"onClick={onDelete}> 
+                                Delete 
+                            </button>
+                            
+                            {editing ? <button className='btn btn-warning' onClick={onSave}> Save</button>:<button className="btn btn-success" onClick={onEdit}> 
+                                Edit 
+                            </button> }
 
-                    </div>
-                </div>   
-                <div className="product-image">   
-                    <img src="https://sc01.alicdn.com/kf/HTB1Cic9HFXXXXbZXpXXq6xXFXXX3/200006212/HTB1Cic9HFXXXXbZXpXXq6xXFXXX3.jpg" alt="Omar Dsoky" />
+                        </div>
+                    </div>   
+                
                 </div>
-            </div>
+            </div>  
         </Fragment>
     );   
     

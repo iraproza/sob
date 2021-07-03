@@ -17,6 +17,14 @@
     justify-content: space-between;
 }
 
+
+.card {
+    transition: .4s;
+}
+.card:hover {
+    box-shadow: 1px -1px 5px #000000
+}
+
 .details {
     display: flex;
     width: 24%;
