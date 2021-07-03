@@ -1,7 +1,8 @@
 const initialState = {
     List: [],
     SingleProduct: "",
-    SearchCurrentProduct: ""
+    searchList: [],
+    valueSearch: ''
 }
 const shopReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -26,23 +27,23 @@ const shopReducer = (state = initialState, action) => {
             }
 
 
-        case "SEARCH_PRODUCT":  
-            if (action.payload === 0) {
-                return state;
-            }
+        case "SEARCH_CONTACT":
             const tmpList = state.List.slice();
             let newList = tmpList.filter((item) => {
                 return item.name.toLowerCase().indexOf(action.payload.toLowerCase()) > -1;
             });
+            
             if (newList.length === 0) {
                 return {
                     ...state,
-                    SearchCurrentProduct: []
+                    searchList: [],
+                    valueSearch: action.payload
                 }
             } else {
                 return {
                     ...state,
-                    SearchCurrentProduct: newList
+                    searchList: newList,
+                    valueSearch: action.payload
                 }
             }
 

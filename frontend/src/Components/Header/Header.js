@@ -1,11 +1,16 @@
 import React from 'react'
 import "../../index.css"
+import { connect } from "react-redux";
 import {Nav, Navbar, NavDropdown, Container, Form,Button, FormControl} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import "./Header.css";
+import {searchContact} from "../../Actions/shopActions"
 
+const Header = ({searchContact}) => {
 
-const Header = () => {
+    const onSearch = (event) => {
+        searchContact(event.target.value)
+    }
     return (
         <header className="bg-primary">
             <Container>
@@ -22,7 +27,7 @@ const Header = () => {
                             
                         </Nav>
                         <Form inline>
-                            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+                            <FormControl type="text" placeholder="Search" className="mr-sm-2" onChange = {onSearch} />
                             <Button variant="outline-light">Search</Button>
                         </Form>
                     </Navbar.Collapse>
@@ -32,4 +37,8 @@ const Header = () => {
     )
 }
 
-export default Header
+
+const mapDispatchToProps = {
+    searchContact
+}
+export default connect(null, mapDispatchToProps)(Header);

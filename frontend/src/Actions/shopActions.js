@@ -12,10 +12,10 @@ export const getCurrentProduct = (product) => {
     }
 }
 
-export const searchProduct = (product) => {
-    return {
-        type: "SEARCH_PRODUCT",
-        payload: product  
+export const searchContact = (name) =>{
+    return{
+        type: "SEARCH_CONTACT",
+        payload: name
     }
 }
 
